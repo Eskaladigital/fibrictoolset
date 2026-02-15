@@ -23,7 +23,7 @@ function LazyVideoSection({ src, poster, aspectRatio = '16/9' }: { src: string; 
   return (
     <div ref={ref} style={{ aspectRatio, background: 'var(--surface)' }}>
       {isVisible && (
-        <video autoPlay muted loop playsInline preload="none" poster={poster} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}>
+        <video autoPlay muted loop playsInline preload="none" poster={poster} onLoadedMetadata={(e) => { e.currentTarget.playbackRate = 0.8; }} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}>
           <source src={src} type="video/mp4" />
         </video>
       )}
@@ -55,13 +55,13 @@ export default function HomePage() {
           loop
           playsInline
           preload="auto"
-          poster={VIDEO_INTRO_POSTER}
+          onLoadedMetadata={(e) => { e.currentTarget.playbackRate = 0.8; }}
           style={{
             position: 'absolute', inset: 0, width: '100%', height: '100%',
             objectFit: 'cover', zIndex: 0,
           }}
         >
-          <source src={VIDEO_INTRO} type="video/mp4" />
+          <source src={VIDEO_ALT} type="video/mp4" />
         </video>
         <div style={{
           position: 'absolute', inset: 0, zIndex: 1,
@@ -154,7 +154,7 @@ export default function HomePage() {
           }}>
             <span style={{
               fontFamily: 'var(--font-display)', fontSize: 'clamp(4rem, 10vw, 8rem)',
-              letterSpacing: 5, color: 'rgba(212,168,83,0.06)',
+              letterSpacing: 5, color: 'rgba(132, 210, 242, 0.2)',
             }}>LEENA</span>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function HomePage() {
       {/* ===== VIDEO SUTIL 2 ===== */}
       <section style={{ padding: 0, background: 'var(--bg)', position: 'relative' }}>
         <div style={{ width: '100%', overflow: 'hidden' }}>
-          <LazyVideoSection src={VIDEO_INTRO} poster={VIDEO_INTRO_POSTER} />
+          <LazyVideoSection src={VIDEO_ALT} />
         </div>
         <div style={{
           position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
