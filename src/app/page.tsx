@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
 const VIDEO_INTRO = 'https://video.wixstatic.com/video/2f124e_8307078ac0014fa8bcd9aaf0dc862565/1080p/mp4/file.mp4';
@@ -131,7 +132,7 @@ export default function HomePage() {
       {/* ===== VIDEO SUTIL 1 ===== */}
       <section style={{ padding: 0, background: 'var(--bg)', position: 'relative' }}>
         <div style={{ width: '100%', overflow: 'hidden' }}>
-          <LazyVideoSection src={VIDEO_ALT} />
+          <LazyVideoSection src={VIDEO_INTRO} poster={VIDEO_INTRO_POSTER} />
         </div>
         <div style={{
           position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -150,12 +151,19 @@ export default function HomePage() {
           <div style={{
             width: '100%', height: '100%', minHeight: 400,
             background: 'linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #1a1210 100%)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1.5rem',
           }}>
             <span style={{
               fontFamily: 'var(--font-display)', fontSize: 'clamp(4rem, 10vw, 8rem)',
               letterSpacing: 5, color: 'rgba(132, 210, 242, 0.2)',
             }}>LEENA</span>
+            <Image
+              src="/images/lenna/leena_banner.avif"
+              alt="Leena"
+              width={600}
+              height={200}
+              style={{ width: 'auto', height: 'auto', maxWidth: '80%', maxHeight: '50%', objectFit: 'contain' }}
+            />
           </div>
         </div>
         <div className="showcase-content">
@@ -185,7 +193,7 @@ export default function HomePage() {
       {/* ===== VIDEO SUTIL 2 ===== */}
       <section style={{ padding: 0, background: 'var(--bg)', position: 'relative' }}>
         <div style={{ width: '100%', overflow: 'hidden' }}>
-          <LazyVideoSection src={VIDEO_INTRO} poster={VIDEO_INTRO_POSTER} />
+          <LazyVideoSection src={VIDEO_ALT} />
         </div>
         <div style={{
           position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
