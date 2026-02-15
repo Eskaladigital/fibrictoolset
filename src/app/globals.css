@@ -237,7 +237,7 @@ textarea::placeholder {
 .feature-number {
   font-family: var(--font-display);
   font-size: 3.5rem;
-  color: rgba(255, 255, 255, 0.03);
+  color: rgba(132, 210, 242, 0.35);
   margin-bottom: 1.5rem;
   transition: all 0.4s;
 }
