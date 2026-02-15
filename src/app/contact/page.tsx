@@ -31,9 +31,11 @@ export default function ContactPage() {
             <h3 style={{
               fontFamily: 'var(--font-display)', fontSize: '2.5rem',
               letterSpacing: 2, marginBottom: '1.5rem',
+              color: 'var(--white)', textShadow: 'var(--text-shadow-dark)',
             }}>GET IN TOUCH</h3>
             <p style={{
               color: 'var(--gray)', lineHeight: 1.8, marginBottom: '1rem', fontWeight: 300,
+              textShadow: 'var(--text-shadow-dark)',
             }}>
               For sales or studio evaluation related inquiries please get in touch using this email.
             </p>
@@ -46,6 +48,7 @@ export default function ContactPage() {
             </a>
             <p style={{
               color: 'var(--gray)', lineHeight: 1.8, fontWeight: 300,
+              textShadow: 'var(--text-shadow-dark)',
             }}>
               For further questions or support please submit your ticket using the form.
             </p>

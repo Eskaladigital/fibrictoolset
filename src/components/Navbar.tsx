@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
@@ -36,11 +37,15 @@ export default function Navbar() {
         borderBottom: '1px solid var(--border)',
         transition: 'all 0.3s',
       }}>
-        <Link href="/" style={{
-          fontFamily: 'var(--font-display)', fontSize: '1.8rem',
-          letterSpacing: '3px', color: 'var(--white)', textDecoration: 'none',
-        }}>
-          FIBRIC<span style={{ color: 'var(--gold)' }}>.</span>
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <Image
+            src="/images/logo/2f124e_0685e3d35c13411f9f4f55385045f9f1~mv2.png"
+            alt="Fibric"
+            width={140}
+            height={40}
+            style={{ height: 'auto', width: 'auto', maxHeight: 40 }}
+            priority
+          />
         </Link>
 
         <div className="nav-desktop" style={{
@@ -52,6 +57,7 @@ export default function Navbar() {
               textDecoration: 'none', fontSize: '0.72rem',
               textTransform: 'uppercase', letterSpacing: '2px',
               fontWeight: 600, transition: 'color 0.3s',
+              textShadow: '0 1px 2px rgba(0,0,0,0.8)',
             }}
             onMouseEnter={e => (e.currentTarget.style.color = 'var(--gold)')}
             onMouseLeave={e => (e.currentTarget.style.color = pathname === l.href ? 'var(--gold)' : 'var(--gray)')}

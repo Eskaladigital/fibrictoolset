@@ -36,7 +36,7 @@ export default function AboutPage() {
         <div style={{
           maxWidth: 800, margin: '0 auto 5rem', textAlign: 'center',
           color: 'var(--gray)', fontWeight: 300, lineHeight: 2, fontSize: '1.05rem',
-          padding: '0 2rem',
+          padding: '0 2rem', textShadow: 'var(--text-shadow-dark)',
         }}>
           <p>Fibric was created by Pepe Buendía and Agustín González as an attempt to push the boundaries of character look development in Houdini.</p>
           <br />
@@ -65,14 +65,17 @@ export default function AboutPage() {
               <h3 style={{
                 fontFamily: 'var(--font-display)', fontSize: '1.5rem',
                 letterSpacing: 1, marginBottom: '0.5rem',
+                color: 'var(--white)', textShadow: 'var(--text-shadow-dark)',
               }}>{t.name}</h3>
               <span style={{
                 color: 'var(--gold)', fontSize: '0.75rem', textTransform: 'uppercase',
                 letterSpacing: '2px', fontWeight: 600, marginBottom: '1.5rem', display: 'block',
+                textShadow: 'var(--text-shadow-dark)',
               }}>{t.role}</span>
               <p style={{
                 color: 'var(--gray)', fontSize: '0.9rem', lineHeight: 1.7,
                 marginBottom: '2rem', fontWeight: 300,
+                textShadow: 'var(--text-shadow-dark)',
               }}>{t.bio}</p>
               <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>
                 {t.links.map(l => (

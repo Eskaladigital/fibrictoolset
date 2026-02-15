@@ -37,7 +37,7 @@ export default function DocumentationPage() {
           maxWidth: 800, margin: '0 auto 4rem', padding: '2.5rem 3rem',
           border: '1px solid var(--gold)', background: 'var(--gold-dim)', textAlign: 'center',
         }}>
-          <p style={{ color: '#aaa', marginBottom: '1.5rem', fontWeight: 300, lineHeight: 1.7 }}>
+          <p style={{ color: 'var(--gray)', marginBottom: '1.5rem', fontWeight: 300, lineHeight: 1.7, textShadow: 'var(--text-shadow-dark)' }}>
             Documentation will be available soon on this page. Meanwhile you can access the current doc site here.
           </p>
           <a href="https://sites.google.com/view/fibric-documentation/documentation?authuser=0"
@@ -53,10 +53,12 @@ export default function DocumentationPage() {
           <h2 style={{
             fontFamily: 'var(--font-display)', fontSize: '2.5rem',
             letterSpacing: 2, marginBottom: '1rem',
+            color: 'var(--white)', textShadow: 'var(--text-shadow-dark)',
           }}>FIBRIC ESSENTIALS</h2>
           <p style={{
             color: 'var(--gray)', fontWeight: 300, lineHeight: 1.8,
             maxWidth: 600, margin: '0 auto 1.5rem',
+            textShadow: 'var(--text-shadow-dark)',
           }}>
             Dive into Fibric Essentials! In this course, we&apos;ll explore the complete Fibric toolset and show you how to use every feature to create amazing textile designs. You&apos;ll get tips and tricks not just for Fibric, but also for working more efficiently in Houdini.
           </p>
@@ -79,7 +81,7 @@ export default function DocumentationPage() {
                 fontFamily: 'var(--font-display)', fontSize: '1.5rem',
                 color: 'var(--gold)', minWidth: '3rem', textAlign: 'center',
               }}>{String(i + 1).padStart(2, '0')}</span>
-              <span style={{ fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.5px' }}>
+              <span style={{ fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.5px', color: 'var(--white)', textShadow: 'var(--text-shadow-dark)' }}>
                 {lesson}
               </span>
               <span style={{ marginLeft: 'auto', color: 'var(--gray)', fontSize: '0.8rem' }}>▶</span>

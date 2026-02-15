@@ -64,6 +64,7 @@ export default function FAQPage() {
                   fontSize: '1rem',
                   fontWeight: 600,
                   textAlign: 'left',
+                  textShadow: 'var(--text-shadow-dark)',
                   cursor: 'pointer',
                   transition: 'color 0.3s',
                   position: 'relative',
@@ -90,6 +91,7 @@ export default function FAQPage() {
                   color: 'var(--gray)',
                   fontWeight: 300,
                   lineHeight: 1.8,
+                  textShadow: 'var(--text-shadow-dark)',
                 }}>
                   {item.a}
                 </div>

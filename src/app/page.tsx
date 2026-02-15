@@ -79,15 +79,18 @@ export default function HomePage() {
           <p style={{
             fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '6px',
             color: 'var(--gold)', marginBottom: '1.5rem', fontWeight: 600,
+            textShadow: '0 1px 2px rgba(0,0,0,0.8)',
           }}>Houdini Toolset — 2025</p>
           <h1 style={{
             fontFamily: 'var(--font-display)',
             fontSize: 'clamp(3.5rem, 10vw, 8rem)',
             lineHeight: 0.95, letterSpacing: '2px', marginBottom: '1.5rem',
+            color: 'var(--white)', textShadow: '0 1px 2px rgba(0,0,0,0.8)',
           }}>FIBRIC TOOLSET</h1>
           <p style={{
             fontSize: '1.15rem', color: 'var(--gray)', maxWidth: 560,
             margin: '0 auto 2.5rem', fontWeight: 300, lineHeight: 1.8,
+            textShadow: '0 1px 2px rgba(0,0,0,0.8)',
           }}>
             The first curve-based clothing and garment system in Houdini. Endless possibilities, maximum realism.
           </p>
@@ -126,9 +129,18 @@ export default function HomePage() {
       </section>
 
       {/* ===== VIDEO SUTIL 1 ===== */}
-      <section style={{ padding: 0, background: 'var(--bg)' }}>
+      <section style={{ padding: 0, background: 'var(--bg)', position: 'relative' }}>
         <div style={{ width: '100%', overflow: 'hidden' }}>
           <LazyVideoSection src={VIDEO_ALT} />
+        </div>
+        <div style={{
+          position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+          background: 'linear-gradient(0deg, rgba(10,10,10,0.5) 0%, transparent 40%, transparent 60%, rgba(10,10,10,0.5) 100%)',
+          pointerEvents: 'none',
+        }}>
+          <a href="https://fibrictoolset.gumroad.com/l/zkbab" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ pointerEvents: 'auto', boxShadow: '0 2px 8px rgba(0,0,0,0.6)' }}>
+            <span>Get Started</span>
+          </a>
         </div>
       </section>
 
@@ -151,13 +163,16 @@ export default function HomePage() {
           <h2 style={{
             fontFamily: 'var(--font-display)', fontSize: '3rem',
             letterSpacing: 2, marginBottom: '0.5rem',
+            color: 'var(--white)', textShadow: 'var(--text-shadow-dark)',
           }}>MEET LEENA</h2>
           <p style={{
             fontFamily: 'var(--font-serif)', fontStyle: 'italic',
             color: 'var(--gold)', fontSize: '1.1rem', marginBottom: '2rem',
+            textShadow: 'var(--text-shadow-dark)',
           }}>The fearless giant octopus hunter</p>
           <p style={{
             color: 'var(--gray)', lineHeight: 1.9, marginBottom: '2.5rem', fontWeight: 300,
+            textShadow: 'var(--text-shadow-dark)',
           }}>
             Created to test and help develop Fibric in Houdini. Rendered with Karma in Solaris and powered by USD, Leena is the perfect crewmate on our journey to smarter, curve-driven clothing in CGI.
           </p>
@@ -168,9 +183,18 @@ export default function HomePage() {
       </section>
 
       {/* ===== VIDEO SUTIL 2 ===== */}
-      <section style={{ padding: 0, background: 'var(--bg)' }}>
+      <section style={{ padding: 0, background: 'var(--bg)', position: 'relative' }}>
         <div style={{ width: '100%', overflow: 'hidden' }}>
           <LazyVideoSection src={VIDEO_INTRO} poster={VIDEO_INTRO_POSTER} />
+        </div>
+        <div style={{
+          position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+          background: 'linear-gradient(0deg, rgba(10,10,10,0.5) 0%, transparent 40%, transparent 60%, rgba(10,10,10,0.5) 100%)',
+          pointerEvents: 'none',
+        }}>
+          <Link href="/documentation" className="btn btn-outline btn-over-video" style={{ pointerEvents: 'auto' }}>
+            <span>Learn More</span>
+          </Link>
         </div>
       </section>
 
@@ -183,19 +207,25 @@ export default function HomePage() {
         </p>
         <div style={{
           width: '100vw', marginLeft: 'calc(-50vw + 50%)', marginBottom: '2rem',
-          overflow: 'hidden',
+          overflow: 'hidden', position: 'relative',
         }}>
           <LazyVideoSection src={VIDEO_TEAR_BURN} poster={VIDEO_TEAR_BURN_POSTER} aspectRatio="2.37" />
+          <div style={{
+            position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
+            background: 'linear-gradient(0deg, rgba(10,10,10,0.4) 0%, transparent 40%, transparent 60%, rgba(10,10,10,0.4) 100%)',
+            pointerEvents: 'none',
+          }}>
+            <a href="https://www.youtube.com/watch?v=N-tMsKeMq5c" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-over-video" style={{ pointerEvents: 'auto' }}>
+              <span>Learn More</span>
+            </a>
+          </div>
         </div>
-        <a href="https://www.youtube.com/watch?v=N-tMsKeMq5c" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
-          <span>Learn More</span>
-        </a>
       </section>
 
       {/* ===== HIVE / FMX ===== */}
       <section style={{
         padding: '5rem 4%', color: 'var(--bg)',
-        background: 'linear-gradient(135deg, var(--gold) 0%, var(--accent) 100%)',
+        background: 'linear-gradient(135deg, var(--gold) 0%, var(--accent-dark) 100%)',
         display: 'flex', justifyContent: 'space-between', alignItems: 'center',
         gap: '3rem', flexWrap: 'wrap',
       }}>

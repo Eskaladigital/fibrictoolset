@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -11,22 +12,26 @@ export default function Footer() {
       flexWrap: 'wrap',
       gap: '1rem',
     }}>
-      <Link href="/" style={{
-        fontFamily: 'var(--font-display)', fontSize: '1.8rem',
-        letterSpacing: '3px', color: 'var(--white)', textDecoration: 'none',
-      }}>
-        FIBRIC<span style={{ color: 'var(--gold)' }}>.</span>
+      <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+        <Image
+          src="/images/logo/2f124e_0685e3d35c13411f9f4f55385045f9f1~mv2.png"
+          alt="Fibric"
+          width={140}
+          height={40}
+          style={{ height: 'auto', width: 'auto', maxHeight: 36 }}
+        />
       </Link>
       <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-        <Link href="/buy" style={{ color: 'var(--gray)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Buy</Link>
-        <Link href="/about" style={{ color: 'var(--gray)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px' }}>About</Link>
-        <Link href="/documentation" style={{ color: 'var(--gray)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Docs</Link>
-        <Link href="/contact" style={{ color: 'var(--gray)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Contact</Link>
-        <Link href="/faq" style={{ color: 'var(--gray)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px' }}>FAQ</Link>
+        <Link href="/buy" style={{ color: 'var(--gray)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px', textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>Buy</Link>
+        <Link href="/about" style={{ color: 'var(--gray)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px', textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>About</Link>
+        <Link href="/documentation" style={{ color: 'var(--gray)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px', textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>Docs</Link>
+        <Link href="/contact" style={{ color: 'var(--gray)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px', textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>Contact</Link>
+        <Link href="/faq" style={{ color: 'var(--gray)', fontSize: '0.7rem', textTransform: 'uppercase', letterSpacing: '1px', textShadow: '0 1px 2px rgba(0,0,0,0.8)' }}>FAQ</Link>
       </div>
       <p style={{
         fontSize: '0.7rem', color: 'var(--gray)',
         textTransform: 'uppercase', letterSpacing: '1px',
+        textShadow: '0 1px 2px rgba(0,0,0,0.8)',
       }}>
         &copy;2026 Fibric Toolset. All rights reserved.
       </p>
