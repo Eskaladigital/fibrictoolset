@@ -185,7 +185,7 @@ export default function HomePage() {
       {/* ===== VIDEO SUTIL 2 ===== */}
       <section style={{ padding: 0, background: 'var(--bg)', position: 'relative' }}>
         <div style={{ width: '100%', overflow: 'hidden' }}>
-          <LazyVideoSection src={VIDEO_ALT} />
+          <LazyVideoSection src={VIDEO_INTRO} poster={VIDEO_INTRO_POSTER} />
         </div>
         <div style={{
           position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
